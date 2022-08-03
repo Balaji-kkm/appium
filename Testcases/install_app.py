@@ -17,28 +17,21 @@ desired_caps['platformName'] = 'Android'
 desired_caps['deviceName'] = 'Android'
 # desired_caps['appPackage'] = 'com.apnamart.apnaconsumer'
 # desired_caps['appActivity'] = '.presentation.activities.dashboard.DashBoardActivity'
-desired_caps['app'] = str(Path().absolute().parent) + '\\apps\\Apna Mart.apk'
+desired_caps['app'] = str(Path().absolute().parent) + '\\apps\\Amazon.apk'
 
 
 driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 driver.implicitly_wait(5)
 
-# phone_number = driver.find_element(By.ID, 'com.apnamart.apnaconsumer:id/phoneInputEditText')
-# phone_number.click()
-# driver.find_element(By.ID, 'com.google.android.gms:id/cancel').click()
-#
-# wait = WebDriverWait(driver, 10)
-# wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'android.widget.ImageView')))
-#
-# driver.find_element(By.CLASS_NAME, 'android.widget.ImageView').click()
-#
-# phone_number.send_keys("9865291104")
+# android automator
+
+driver.find_element(By.android_uiautomator)
+
+
 
 time.sleep(2)
 
 
-# driver.find_element(By.CLASS_NAME, 'android.widget.ImageView').click()
-# time.sleep(2)
 # for switching apps
 # driver.start_activity('com.google.android.apps.messaging', '.launcher.Launcher')
 
